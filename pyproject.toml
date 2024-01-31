@@ -1,0 +1,47 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "ReAXET", email = "joshua.sturm@outlook.com"},
+]
+dependencies = [
+    "fastapi[all]>=0.109.0",
+    "sqlalchemy>=2.0.25",
+    "psycopg2-binary>=2.9.9",
+    "asyncpg>=0.29.0",
+    "redis>=5.0.1",
+    "celery>=5.3.6",
+    "alembic>=1.13.1",
+    "asgiref>=3.7.2",
+    "casbin>=1.35.0",
+    "casbin-async-sqlalchemy-adapter>=1.4.0",
+    "email-validator>=2.1.0.post1",
+    "gunicorn>=21.2.0",
+    "loguru>=0.7.2",
+    "httpx>=0.26.0",
+    "phonenumbers>=8.13.29",
+    "pre-commit>=3.6.0",
+    "pydantic>=2.6.0",
+    "pydantic-extra-types>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "python-jose>=3.3.0",
+    "python-dotenv>=1.0.1",
+    "python-multipart>=0.0.6",
+    "pytz>=2023.4",
+    "supervisor>=4.2.5",
+    "uvicorn>=0.27.0.post1",
+    "sqlmodel>=0.0.14",
+    "rich>=13.7.0",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
