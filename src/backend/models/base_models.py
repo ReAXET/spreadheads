@@ -14,8 +14,6 @@ class Base(SQLModel, table=True):
 
     model_config = SettingsConfigDict(extra="allow", from_attributes=True, arbitrary_types_allowed=True, env_file='.env', env_file_encoding='utf-8')
     
-
-    id: UUID = Field(default_factory=uuid4, primary_key=True)
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
     deleted_at: Optional[datetime] = Field(default=None, nullable=True)
@@ -38,3 +36,4 @@ class Base(SQLModel, table=True):
         return f'<{cls.__name__} {cls.id}>'
     
     
+
